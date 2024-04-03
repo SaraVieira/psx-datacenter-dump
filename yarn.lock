@@ -7,6 +7,13 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
+axios-retry@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/axios-retry/-/axios-retry-4.1.0.tgz#aac5a9657213913048201152ef14090f7111608f"
+  integrity sha512-svdth4H00yhlsjBbjfLQ/sMLkXqeLxhiFC1nE1JtkN/CIssGxqk0UwTEdrVjwA2gr3yJkAulwvDSIm4z4HyPvg==
+  dependencies:
+    is-retry-allowed "^2.2.0"
+
 axios@^1.6.8:
   version "1.6.8"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.8.tgz#66d294951f5d988a00e87a0ffb955316a619ea66"
@@ -137,6 +144,11 @@ htmlparser2@^8.0.1:
     domhandler "^5.0.3"
     domutils "^3.0.1"
     entities "^4.4.0"
+
+is-retry-allowed@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/is-retry-allowed/-/is-retry-allowed-2.2.0.tgz#88f34cbd236e043e71b6932d09b0c65fb7b4d71d"
+  integrity sha512-XVm7LOeLpTW4jV19QSH38vkswxoLud8sQ57YwJVTPWdiaI9I8keEhGFpBlslyVsgdQy4Opg8QOLb8YRgsyZiQg==
 
 mime-db@1.52.0:
   version "1.52.0"
