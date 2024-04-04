@@ -19,8 +19,8 @@ axiosRetry(axios, {
   },
 });
 
-const getGames = async (file) => {
-  const promis = data.pal.map(async (game) => {
+const getGames = async (file, u) => {
+  const promis = data[u].map(async (game) => {
     let html;
     if (JSON.parse(file).find((g) => g.url === game)) {
       return JSON.parse(file).find((g) => g.url === game);
@@ -41,14 +41,14 @@ const getGames = async (file) => {
 
 (async () => {
   try {
-    const palGames = await getPal(fs.readFileSync(FILES.PAL, "utf-8"));
-    fs.writeFileSync(FILES.PAL, JSON.stringify(palGames, null, 2));
+    // const palGames = await getGames(fs.readFileSync(FILES.PAL, "utf-8"), "pal");
+    // fs.writeFileSync(FILES.PAL, JSON.stringify(palGames, null, 2));
 
-    const ntscGames = await getNtsc(fs.readFileSync(FILES.NTSC, "utf-8"));
-    fs.writeFileSync(FILES.NTSC, JSON.stringify(ntscGames, null, 2));
+    // const ntscGames = await getGames(fs.readFileSync(FILES.NTSC, "utf-8"), "u");
+    // fs.writeFileSync(FILES.NTSC, JSON.stringify(ntscGames, null, 2));
 
-    const jGames = await getj(fs.readFileSync(FILES.J, "utf-8"));
-    fs.writeFileSync(FILES.J, JSON.stringify(jGames, null, 2));
+    const jGames = await getGames(fs.readFileSync(FILES.JAPAN, "utf-8"), "j");
+    fs.writeFileSync(FILES.JAPAN, JSON.stringify(jGames, null, 2));
   } catch (e) {
     console.log("OH NO", e);
   }
